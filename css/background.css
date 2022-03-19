@@ -1,4 +1,4 @@
-#web_bg {
+/* #web_bg {
     background: -webkit-linear-gradient(
       0deg,
       rgba(247, 149, 51, 0.1) 0,
@@ -54,15 +54,123 @@
       rgba(7, 179, 155, 0.1) 86%,
       rgba(109, 186, 130, 0.1) 100%
     );
-  }
-
-  /* 文章页背景 */
-.layout>div:first-child:not(.recent-posts) {
-    /* 以下代表白色透明度为0.3 */
-    background: rgba(255,255,255,.3);
+  } */
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item{
+  background:rgba(255, 255, 255, 0.7);
 }
-/* 所有背景（包括首页卡片、文章页、页面页等） */
-#recent-posts>.recent-post-item,.layout>div:first-child:not(.recent-posts),.layout_post>#page,.layout_post>#post,.read-mode .layout_post>#post{
-    /* 以下代表白色透明度为0.3 */
-    background: rgba(255,255,255,.3);
+/* 首页侧栏卡片 */
+.card-widget{
+background:rgba(255, 255, 255, 0.7)!important;
+}
+/* 文章页面正文背景 */
+div#post{
+background: rgba(255, 255, 255, 0.7);
+}
+/* 分页页面 */
+div#page{
+background: rgba(255, 255, 255, 0.7);
+}
+/* 归档页面 */
+div#archive{
+background: rgba(255, 255, 255, 0.7);
+}
+/* 标签页面 */
+div#tag{
+background: rgba(255, 255, 255, 0.7);
+}
+/* 分类页面 */
+div#category{
+background: rgba(255, 255, 255, 0.7);
+}
+#footer{
+  opacity: 0.7;
+}
+/* 页脚透明 */
+#footer{
+  background: transparent!important;
+}
+/* 页脚黑色透明玻璃效果移除 */
+#footer::before{
+    background: transparent!important;
+  }
+/* 头图透明 */
+#page-header{
+  background: transparent!important;
+}
+/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+#page-header.post-bg:before {
+  background-color: transparent!important;
+}
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"]
+  #footer::before{
+      background: transparent!important;
+    }
+[data-theme="dark"]
+  #page-header::before{
+    background: transparent!important;
+    }
+/* 主页所有文章页面背景 */
+#aside_content .card-widget .card-info, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+  /* 以下代表透明度为0.5 */
+  background: rgba(255,255,255,.7) !important;
+}
+#aside-content>.card-info {
+  background: rgba(255, 255, 255, .7);
+}
+/*侧边栏页面*/
+#aside-content>.card-widget  {
+  background: rgba(255,255,255,.7);
+}
+#aside-content>.sticky_layout>.card-widget{
+  background: rgba(255,255,255,.7);
+}
+/*文章页面*/
+.layout>#post{
+  background: rgba(255,255,255,.8);
+}
+/*分类页面*/
+.layout>#page{
+  
+  background: rgba(255,255,255,.7);
+}
+/*时间轴页面*/
+.layout>#archive{
+  background: rgba(255,255,255,.7);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
 }
